@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ca" xml:lang="ca"><head>
     <meta charset="utf-8">
     <meta name="generator" content="quarto-1.9.18">
 
@@ -7,7 +7,7 @@
 
     <meta name="author" content="Charlotte Wickham">
 
-    <title>Explore Earthquakes</title>
+    <title>Exploració de terratrèmols</title>
     <style>
       /* Default styles provided by pandoc.
       ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -177,16 +177,16 @@
   <body class="quarto-notebook quarto-light">
     <div id="quarto-embed-header" class="headroom fixed-top bg-primary">
       
-      <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Back to Article</a>
-      <h6><i class="bi bi-journal-code"></i> Explore Earthquakes</h6>
+      <a onclick="window.quartoBackToArticle(); return false;" class="btn btn-primary quarto-back-link" href=""><i class="bi bi-caret-left"></i> Torna a l’article</a>
+      <h6><i class="bi bi-journal-code"></i> Exploració de terratrèmols</h6>
 
-            <a href="../notebooks/explore-earthquakes.qmd" class="btn btn-primary quarto-download-embed" download="explore-earthquakes.qmd">Download Source</a>
+            <a href="../notebooks/explore-earthquakes.qmd" class="btn btn-primary quarto-download-embed" download="explore-earthquakes.qmd">Descarrega el codi</a>
           </div>
 
      <header id="title-block-header" class="quarto-title-block default toc-left page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Explore Earthquakes</h1>
+      <h1 class="title">Exploració de terratrèmols</h1>
           </div>
 
     
@@ -196,7 +196,7 @@
         <div class="quarto-title-meta">
 
                 <div>
-            <div class="quarto-title-meta-heading">Author</div>
+            <div class="quarto-title-meta-heading">Autor/a</div>
             <div class="quarto-title-meta-contents">
                         <p>Charlotte Wickham </p>
                       </div>
@@ -223,23 +223,23 @@
 <main class="content quarto-banner-title-block" id="quarto-document-content">      
 
      <div class="cell-container"><div class="cell-decorator"><pre>In [1]:</pre></div><div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copia al porta-retalls" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ✔ dplyr     1.1.4     ✔ readr     2.1.5
 ✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.0     ✔ tibble    3.2.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     
+✔ ggplot2   3.5.2     ✔ tibble    3.3.0
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.0.4     
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
 </div>
 </div></div>
-<p>Read a clean version of data:</p>
+<p>Llegir i endreçar les dades:</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [2]:</pre></div><div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>la_palma <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"la-palma.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>la_palma <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"la-palma.csv"</span>)</span></code></pre></div><button title="Copia al porta-retalls" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Rows: 11347 Columns: 5
 ── Column specification ────────────────────────────────────────────────────────
@@ -251,23 +251,23 @@ dttm (1): DateTime
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
 </div>
 </div></div>
-<p>Create spatial plot:</p>
+<p>Creació d’un gràfic espacial:</p>
 <div class="cell-container"><div class="cell-decorator"><pre>In [3]:</pre></div><div id="cell-fig-spatial-plot" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|   against longitude."</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>la_palma <span class="sc">|&gt;</span> </span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(Longitude, Latitude)) <span class="sc">+</span></span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> Magnitude, <span class="at">size =</span> <span class="dv">40</span><span class="sc">-</span><span class="st">`</span><span class="at">Depth(km)</span><span class="st">`</span>)) <span class="sc">+</span></span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_viridis_c</span>(<span class="at">direction =</span> <span class="sc">-</span><span class="dv">1</span>) <span class="sc">+</span> </span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_size</span>(<span class="at">range =</span> <span class="fu">c</span>(<span class="fl">0.5</span>, <span class="dv">2</span>), <span class="at">guide =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div><button title="Copia al porta-retalls" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
-<div id="fig-spatial-plot" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A scatterplot of earthquake locations plotting latitude against longitude.">
+<div id="fig-spatial-plot" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Diagrama de dispersió de les localitats dels terratrèmols, represntant la latitud i la longitud.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-spatial-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="">
-<a href="explore-earthquakes_files/figure-html/fig-spatial-plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Locations of earthquakes on La Palma since 2017"><img src="explore-earthquakes_files/figure-html/fig-spatial-plot-1.png" class="img-fluid figure-img" alt="A scatterplot of earthquake locations plotting latitude against longitude." width="672"></a>
+<a href="explore-earthquakes_files/figure-html/fig-spatial-plot-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Localitats dels terratrèmols a La Palma des de 2017"><img src="explore-earthquakes_files/figure-html/fig-spatial-plot-1.png" class="img-fluid figure-img" alt="Diagrama de dispersió de les localitats dels terratrèmols, represntant la latitud i la longitud." width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-spatial-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Locations of earthquakes on La Palma since 2017
+Localitats dels terratrèmols a La Palma des de 2017
 </figcaption>
 </figure>
 </div>
@@ -299,12 +299,12 @@ Locations of earthquakes on La Palma since 2017
       // flash "checked"
       button.classList.add('code-copy-button-checked');
       var currentTitle = button.getAttribute("title");
-      button.setAttribute("title", "Copied!");
+      button.setAttribute("title", "Copiat!");
       let tooltip;
       if (window.bootstrap) {
         button.setAttribute("data-bs-toggle", "tooltip");
         button.setAttribute("data-bs-placement", "left");
-        button.setAttribute("data-bs-title", "Copied!");
+        button.setAttribute("data-bs-title", "Copiat!");
         tooltip = new bootstrap.Tooltip(button, 
           { trigger: "manual", 
             customClass: "code-copy-button-tooltip",

@@ -9,7 +9,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <journal-id></journal-id>
 
 <journal-title-group>
-<journal-title>Earth and Space Science</journal-title>
+<journal-title>Ciències de la Terra i del Cel</journal-title>
 </journal-title-group>
 <issn></issn>
 
@@ -23,7 +23,7 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 
 
 <title-group>
-<article-title>La Palma Earthquakes</article-title>
+<article-title>Terratrèmols a La Palma</article-title>
 </title-group>
 
 <contrib-group>
@@ -36,12 +36,10 @@ and Interchange DTD v1.2 20190208//EN" "JATS-archivearticle1.dtd">
 <string-name>Steve Purves</string-name>
 
 <email>steve@curvenote.com</email>
-<role vocab="https://credit.niso.org" vocab-term="investigation" vocab-term-identifier="https://credit.niso.org/contributor-roles/investigation/">Investigation</role>
-<role vocab="https://credit.niso.org" vocab-term="project
-administration" vocab-term-identifier="https://credit.niso.org/contributor-roles/project-administration/">Project
-administration</role>
-<role vocab="https://credit.niso.org" vocab-term="software" vocab-term-identifier="https://credit.niso.org/contributor-roles/software/">Software</role>
-<role vocab="https://credit.niso.org" vocab-term="visualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/visualization/">Visualization</role>
+<role>Investigació</role>
+<role>Administració del projecte</role>
+<role>Programari</role>
+<role>Visualitzacio</role>
 <xref ref-type="aff" rid="aff-1">a</xref>
 <xref ref-type="corresp" rid="cor-1">&#x002A;</xref>
 </contrib>
@@ -88,15 +86,15 @@ administration</role>
 
 
 <abstract>
-<p>In September 2021, a significant jump in seismic activity on the
-island of La Palma (Canary Islands, Spain) signaled the start of a
-volcanic crisis that still continues at the time of writing. Earthquake
-data is continually collected and published by the Instituto Geográphico
-Nacional (IGN). …</p>
+<p>En setembre de 2021, un bot significant en l’activitat sísma de
+l’illa de La Palma (Illes Canàries, Espanya) va senyalar l’inici d’una
+crisi volcànica que encara continua. Dades de terratrèmols són
+arreplegades i publicades continuament per l’Institut Geográfic Nacional
+(IGN).</p>
 </abstract>
 <kwd-group kwd-group-type="author">
 <kwd>La Palma</kwd>
-<kwd>Earthquakes</kwd>
+<kwd>Terratrèmols</kwd>
 </kwd-group>
 
 
@@ -107,61 +105,63 @@ Nacional (IGN). …</p>
 </front>
 
 <body>
-<sec id="introduction">
-  <title>1 Introduction</title>
+<sec id="introducció">
+  <title>1 Introducció</title>
   <fig id="fig-timeline">
-    <caption><p>Figure 1: Timeline of recent earthquakes on La
-    Palma</p></caption>
+    <caption><p>Figura 1: Cronologia de terratrèmols
+    recents.</p></caption>
     <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-timeline-1.png" />
   </fig>
-  <p>Based on data up to and including 1971, eruptions on La Palma
-  happen every 79.8 years on average.</p>
-  <p>Studies of the magma systems feeding the volcano, such as Marrero
-  et al.
+  <p>D’acorda amb dades que arriben a l’any 1971, les eurpcions a La
+  Palma esdevenen cada 79.8 anys en terme mig.</p>
+  <p>Estudis dels sistema magmàtic que alimenten el volcà, tal com
+  Marrero et al.
   (<xref alt="2019" rid="ref-marrero2019" ref-type="bibr">2019</xref>),
-  have proposed that there are two main magma reservoirs feeding the
-  Cumbre Vieja volcano; one in the mantle (30-40km depth) which charges
-  and in turn feeds a shallower crustal reservoir (10-20km depth).</p>
-  <p>Eight eruptions have been recorded since the late 1400s
-  (<xref alt="Figure 1" rid="fig-timeline">Figure 1</xref>).</p>
-  <p>Data and methods are discussed in
-  <xref alt="Section 2" rid="sec-data-methods">Section 2</xref>.</p>
-  <p>Let <inline-formula><alternatives>
+  proposen que hi ha dos reserves principals de magma que alimenten el
+  volcà de <italic>Cumbre Vieja</italic>; un al mantell (30-40 km de
+  profunditat), que recarrega i alimenta alhora una reserva més
+  superficial a l’escorça (10-20 km de profunditat).</p>
+  <p>Huit erupcions han estat registrades des de finals del segle XV
+  (<xref alt="Figura 1" rid="fig-timeline">Figura 1</xref>).</p>
+  <p>Les dades i els mètodes són discutats en
+  <xref alt="Secció 2" rid="sec-data-methods">Secció 2</xref>.</p>
+  <p>Siga <inline-formula><alternatives>
   <tex-math><![CDATA[x]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  denote the number of eruptions in a year. Then,
+  el nombre d’erupcions en un any. Aleshores,
   <inline-formula><alternatives>
   <tex-math><![CDATA[x]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  can be modeled by a Poisson distribution</p>
+  pot ser modelada per una distribució de Poisson</p>
   <p><styled-content id="eq-poisson"><disp-formula><alternatives>
   <tex-math><![CDATA[
   p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
    \qquad(1)]]></tex-math>
   <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>p</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:msup><mml:mi>e</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mi>λ</mml:mi></mml:mrow></mml:msup><mml:msup><mml:mi>λ</mml:mi><mml:mi>x</mml:mi></mml:msup></mml:mrow><mml:mrow><mml:mi>x</mml:mi><mml:mi>!</mml:mi></mml:mrow></mml:mfrac><mml:mspace width="2.0em"></mml:mspace><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
-  <p>where <inline-formula><alternatives>
+  <p>on <inline-formula><alternatives>
   <tex-math><![CDATA[\lambda]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>λ</mml:mi></mml:math></alternatives></inline-formula>
-  is the rate of eruptions per year. Using
-  <xref alt="Equation 1" rid="eq-poisson">Equation 1</xref>, the
-  probability of an eruption in the next <inline-formula><alternatives>
+  és la taxa d’erupcions per any. Utilitzant
+  <xref alt="Equació 1" rid="eq-poisson">Equació 1</xref>, la
+  probabilitat d’una erupció en els pròxims
+  <inline-formula><alternatives>
   <tex-math><![CDATA[t]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>
-  years can be calculated.</p>
+  anys pot ser calculada.</p>
   <fig id="tbl-history">
-    <caption><p>Table 1: Recent historic eruptions on La
+    <caption><p>Taula 1: Història recent d’erupcions a La
     Palma</p></caption>
     <table-wrap>
       <table>
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Year</th>
+            <th>Nome</th>
+            <th>Any</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Current</td>
+            <td>Actual</td>
             <td>2021</td>
           </tr>
           <tr>
@@ -196,35 +196,35 @@ Nacional (IGN). …</p>
       </table>
     </table-wrap>
   </fig>
-  <p><xref alt="Table 1" rid="tbl-history">Table 1</xref> summarises the
-  eruptions recorded since the colonization of the islands by Europeans
-  in the late 1400s.</p>
+  <p><xref alt="Taula 1" rid="tbl-history">Taula 1</xref> resumeix les
+  erupcions registrades des de la colonització de l’illa pels europeus
+  cap a fnals del segle XV.</p>
   <fig id="fig-map">
-    <caption><p>Figure 2: Map of La Palma</p></caption>
+    <caption><p>Figura 2: Mapa de La Palma</p></caption>
     <graphic mimetype="image" mime-subtype="png" xlink:href="images/la-palma-map.png" />
   </fig>
-  <p>La Palma is one of the west most islands in the Volcanic
-  Archipelago of the Canary Islands
-  (<xref alt="Figure 2" rid="fig-map">Figure 2</xref>).</p>
+  <p>La Palma és una de les illes més occidentals de l’arxipèlag
+  volcànic de les Illes Canàries
+  (<xref alt="Figura 2" rid="fig-map">Figura 2</xref>).</p>
   <fig id="fig-spatial-plot">
-    <caption><p>Figure 3: Locations of earthquakes on La Palma since
+    <caption><p>Figura 3: Localitats dels terratrèmols a La Palma des de
     2017</p></caption>
     <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-explore-earthquakes-fig-spatial-plot-output-1.png" />
   </fig>
-  <p><xref alt="Figure 3" rid="fig-spatial-plot">Figure 3</xref> shows
-  the location of recent Earthquakes on La Palma.</p>
+  <p><xref alt="Figura 3" rid="fig-spatial-plot">Figura 3</xref> mostra
+  la localització de terratrèmols recents a La Palma.</p>
 </sec>
 <sec id="sec-data-methods">
-  <title>2 Data &amp; Methods</title>
+  <title>2 Dades i Mètodes</title>
 </sec>
-<sec id="conclusion">
-  <title>3 Conclusion</title>
+<sec id="conclusió">
+  <title>3 Conclusió</title>
 </sec>
 </body>
 
 <back>
 <ref-list>
-  <title>References</title>
+  <title>Referències</title>
   <ref id="ref-marrero2019">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
@@ -235,7 +235,7 @@ Nacional (IGN). …</p>
         <name><surname>Rodríguez-Losada</surname><given-names>Antonio</given-names></name>
         <name><surname>Ortiz</surname><given-names>R.</given-names></name>
       </person-group>
-      <article-title>Strategies for the development of volcanic hazard maps in monogenetic volcanic fields: The example of La Palma (Canary Islands)</article-title>
+      <article-title>Strategies for the development of volcanic hazard maps in monogenetic volcanic fields: the example of La Palma (Canary Islands)</article-title>
       <source>Journal of Applied Volcanology</source>
       <year iso-8601-date="2019-07">2019</year><month>07</month>
       <volume>8</volume>
@@ -250,7 +250,7 @@ Nacional (IGN). …</p>
 <sub-article article-type="notebook" id="nb-8-nb-article">
 <front-stub>
 <title-group>
-<article-title>La Palma Earthquakes</article-title>
+<article-title>Terratrèmols a La Palma</article-title>
 </title-group>
 <contrib-group>
 <contrib contrib-type="author" corresp="yes">
@@ -262,12 +262,10 @@ Nacional (IGN). …</p>
 <string-name>Steve Purves</string-name>
 
 <email>steve@curvenote.com</email>
-<role vocab="https://credit.niso.org" vocab-term="investigation" vocab-term-identifier="https://credit.niso.org/contributor-roles/investigation/">Investigation</role>
-<role vocab="https://credit.niso.org" vocab-term="project
-administration" vocab-term-identifier="https://credit.niso.org/contributor-roles/project-administration/">Project
-administration</role>
-<role vocab="https://credit.niso.org" vocab-term="software" vocab-term-identifier="https://credit.niso.org/contributor-roles/software/">Software</role>
-<role vocab="https://credit.niso.org" vocab-term="visualization" vocab-term-identifier="https://credit.niso.org/contributor-roles/visualization/">Visualization</role>
+<role>Investigació</role>
+<role>Administració del projecte</role>
+<role>Programari</role>
+<role>Visualitzacio</role>
 <xref ref-type="aff" rid="aff-1-nb-article">a</xref>
 <xref ref-type="corresp" rid="cor-1-nb-article">&#x002A;</xref>
 </contrib>
@@ -298,17 +296,17 @@ administration</role>
 <corresp id="cor-1-nb-article">steve@curvenote.com</corresp>
 </author-notes>
 <abstract>
-<p>In September 2021, a significant jump in seismic activity on the
-island of La Palma (Canary Islands, Spain) signaled the start of a
-volcanic crisis that still continues at the time of writing. Earthquake
-data is continually collected and published by the Instituto Geográphico
-Nacional (IGN). …</p>
+<p>En setembre de 2021, un bot significant en l’activitat sísma de
+l’illa de La Palma (Illes Canàries, Espanya) va senyalar l’inici d’una
+crisi volcànica que encara continua. Dades de terratrèmols són
+arreplegades i publicades continuament per l’Institut Geográfic Nacional
+(IGN).</p>
 </abstract>
 </front-stub>
 
 <body>
-<sec id="introduction-nb-article">
-  <title>1 Introduction</title>
+<sec id="introducció-nb-article">
+  <title>1 Introducció</title>
   <sec specific-use="notebook-content">
   <code language="r script">eruptions &lt;- c(1492, 1585, 1646, 1677, 1712, 1949, 1971, 2021)
 n_eruptions &lt;- length(eruptions)</code>
@@ -320,8 +318,8 @@ plot(eruptions, rep(0, n_eruptions),
 axis(1)
 box()</code>
   <fig id="fig-timeline-nb-article">
-    <caption><p>Figure 1: Timeline of recent earthquakes on La
-    Palma</p></caption>
+    <caption><p>Figura 1: Cronologia de terratrèmols
+    recents.</p></caption>
     <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/fig-timeline-1.png" />
   </fig>
   </sec>
@@ -332,54 +330,56 @@ avg_years_between_eruptions</code>
     <preformat>[1] 79.83333</preformat>
   </boxed-text>
   </sec>
-  <p>Based on data up to and including 1971, eruptions on La Palma
-  happen every 79.8 years on average.</p>
-  <p>Studies of the magma systems feeding the volcano, such as Marrero
-  et al.
+  <p>D’acorda amb dades que arriben a l’any 1971, les eurpcions a La
+  Palma esdevenen cada 79.8 anys en terme mig.</p>
+  <p>Estudis dels sistema magmàtic que alimenten el volcà, tal com
+  Marrero et al.
   (<xref alt="2019" rid="ref-marrero2019-nb-article" ref-type="bibr">2019</xref>),
-  have proposed that there are two main magma reservoirs feeding the
-  Cumbre Vieja volcano; one in the mantle (30-40km depth) which charges
-  and in turn feeds a shallower crustal reservoir (10-20km depth).</p>
-  <p>Eight eruptions have been recorded since the late 1400s
-  (<xref alt="Figure 1" rid="fig-timeline-nb-article">Figure 1</xref>).</p>
-  <p>Data and methods are discussed in
-  <xref alt="Section 2" rid="sec-data-methods-nb-article">Section 2</xref>.</p>
-  <p>Let <inline-formula><alternatives>
+  proposen que hi ha dos reserves principals de magma que alimenten el
+  volcà de <italic>Cumbre Vieja</italic>; un al mantell (30-40 km de
+  profunditat), que recarrega i alimenta alhora una reserva més
+  superficial a l’escorça (10-20 km de profunditat).</p>
+  <p>Huit erupcions han estat registrades des de finals del segle XV
+  (<xref alt="Figura 1" rid="fig-timeline-nb-article">Figura 1</xref>).</p>
+  <p>Les dades i els mètodes són discutats en
+  <xref alt="Secció 2" rid="sec-data-methods-nb-article">Secció 2</xref>.</p>
+  <p>Siga <inline-formula><alternatives>
   <tex-math><![CDATA[x]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  denote the number of eruptions in a year. Then,
+  el nombre d’erupcions en un any. Aleshores,
   <inline-formula><alternatives>
   <tex-math><![CDATA[x]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>x</mml:mi></mml:math></alternatives></inline-formula>
-  can be modeled by a Poisson distribution</p>
+  pot ser modelada per una distribució de Poisson</p>
   <p><styled-content id="eq-poisson-nb-article"><disp-formula><alternatives>
   <tex-math><![CDATA[
   p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
    \qquad(1)]]></tex-math>
   <mml:math display="block" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mrow><mml:mi>p</mml:mi><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mi>x</mml:mi><mml:mo stretchy="false" form="postfix">)</mml:mo><mml:mo>=</mml:mo><mml:mfrac><mml:mrow><mml:msup><mml:mi>e</mml:mi><mml:mrow><mml:mi>−</mml:mi><mml:mi>λ</mml:mi></mml:mrow></mml:msup><mml:msup><mml:mi>λ</mml:mi><mml:mi>x</mml:mi></mml:msup></mml:mrow><mml:mrow><mml:mi>x</mml:mi><mml:mi>!</mml:mi></mml:mrow></mml:mfrac><mml:mspace width="2.0em"></mml:mspace><mml:mo stretchy="false" form="prefix">(</mml:mo><mml:mn>1</mml:mn><mml:mo stretchy="false" form="postfix">)</mml:mo></mml:mrow></mml:math></alternatives></disp-formula></styled-content></p>
-  <p>where <inline-formula><alternatives>
+  <p>on <inline-formula><alternatives>
   <tex-math><![CDATA[\lambda]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>λ</mml:mi></mml:math></alternatives></inline-formula>
-  is the rate of eruptions per year. Using
-  <xref alt="Equation 1" rid="eq-poisson-nb-article">Equation 1</xref>, the
-  probability of an eruption in the next <inline-formula><alternatives>
+  és la taxa d’erupcions per any. Utilitzant
+  <xref alt="Equació 1" rid="eq-poisson-nb-article">Equació 1</xref>, la
+  probabilitat d’una erupció en els pròxims
+  <inline-formula><alternatives>
   <tex-math><![CDATA[t]]></tex-math>
   <mml:math display="inline" xmlns:mml="http://www.w3.org/1998/Math/MathML"><mml:mi>t</mml:mi></mml:math></alternatives></inline-formula>
-  years can be calculated.</p>
+  anys pot ser calculada.</p>
   <fig id="tbl-history-nb-article">
-    <caption><p>Table 1: Recent historic eruptions on La
+    <caption><p>Taula 1: Història recent d’erupcions a La
     Palma</p></caption>
     <table-wrap>
       <table>
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Year</th>
+            <th>Nome</th>
+            <th>Any</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Current</td>
+            <td>Actual</td>
             <td>2021</td>
           </tr>
           <tr>
@@ -414,16 +414,16 @@ avg_years_between_eruptions</code>
       </table>
     </table-wrap>
   </fig>
-  <p><xref alt="Table 1" rid="tbl-history-nb-article">Table 1</xref> summarises the
-  eruptions recorded since the colonization of the islands by Europeans
-  in the late 1400s.</p>
+  <p><xref alt="Taula 1" rid="tbl-history-nb-article">Taula 1</xref> resumeix les
+  erupcions registrades des de la colonització de l’illa pels europeus
+  cap a fnals del segle XV.</p>
   <fig id="fig-map-nb-article">
-    <caption><p>Figure 2: Map of La Palma</p></caption>
+    <caption><p>Figura 2: Mapa de La Palma</p></caption>
     <graphic mimetype="image" mime-subtype="png" xlink:href="images/la-palma-map.png" />
   </fig>
-  <p>La Palma is one of the west most islands in the Volcanic
-  Archipelago of the Canary Islands
-  (<xref alt="Figure 2" rid="fig-map-nb-article">Figure 2</xref>).</p>
+  <p>La Palma és una de les illes més occidentals de l’arxipèlag
+  volcànic de les Illes Canàries
+  (<xref alt="Figura 2" rid="fig-map-nb-article">Figura 2</xref>).</p>
   <sec id="cell-fig-spatial-plot-nb-article" specific-use="notebook-content">
   <code language="python">la_palma |&gt; 
   ggplot(aes(Longitude, Latitude)) +
@@ -433,20 +433,20 @@ avg_years_between_eruptions</code>
   theme_bw()</code>
   <boxed-text>
     <fig id="fig-spatial-plot-nb-article">
-      <caption><p>Figure 3: Locations of earthquakes on La Palma since
-      2017</p></caption>
+      <caption><p>Figura 3: Localitats dels terratrèmols a La Palma des
+      de 2017</p></caption>
       <graphic mimetype="image" mime-subtype="png" xlink:href="index_files/figure-jats/notebooks-explore-earthquakes-fig-spatial-plot-output-1.png" />
     </fig>
   </boxed-text>
   </sec>
-  <p><xref alt="Figure 3" rid="fig-spatial-plot-nb-article">Figure 3</xref> shows
-  the location of recent Earthquakes on La Palma.</p>
+  <p><xref alt="Figura 3" rid="fig-spatial-plot-nb-article">Figura 3</xref> mostra
+  la localització de terratrèmols recents a La Palma.</p>
 </sec>
 <sec id="sec-data-methods-nb-article">
-  <title>2 Data &amp; Methods</title>
+  <title>2 Dades i Mètodes</title>
 </sec>
-<sec id="conclusion-nb-article">
-  <title>3 Conclusion</title>
+<sec id="conclusió-nb-article">
+  <title>3 Conclusió</title>
 </sec>
 </body>
 
@@ -454,7 +454,7 @@ avg_years_between_eruptions</code>
 
 <back>
 <ref-list>
-  <title>References</title>
+  <title>Referències</title>
   <ref id="ref-marrero2019-nb-article">
     <element-citation publication-type="article-journal">
       <person-group person-group-type="author">
@@ -465,7 +465,7 @@ avg_years_between_eruptions</code>
         <name><surname>Rodríguez-Losada</surname><given-names>Antonio</given-names></name>
         <name><surname>Ortiz</surname><given-names>R.</given-names></name>
       </person-group>
-      <article-title>Strategies for the development of volcanic hazard maps in monogenetic volcanic fields: The example of La Palma (Canary Islands)</article-title>
+      <article-title>Strategies for the development of volcanic hazard maps in monogenetic volcanic fields: the example of La Palma (Canary Islands)</article-title>
       <source>Journal of Applied Volcanology</source>
       <year iso-8601-date="2019-07">2019</year><month>07</month>
       <volume>8</volume>
@@ -482,7 +482,7 @@ avg_years_between_eruptions</code>
 <sub-article article-type="notebook" id="nb-4-nb-1">
 <front-stub>
 <title-group>
-<article-title>Explore Earthquakes</article-title>
+<article-title>Exploració de terratrèmols</article-title>
 </title-group>
 <contrib-group>
 <contrib contrib-type="author">
@@ -504,16 +504,16 @@ avg_years_between_eruptions</code>
   <preformat>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
 ✔ dplyr     1.1.4     ✔ readr     2.1.5
 ✔ forcats   1.0.0     ✔ stringr   1.5.1
-✔ ggplot2   3.5.0     ✔ tibble    3.2.1
-✔ lubridate 1.9.3     ✔ tidyr     1.3.1
-✔ purrr     1.0.2     
+✔ ggplot2   3.5.2     ✔ tibble    3.3.0
+✔ lubridate 1.9.4     ✔ tidyr     1.3.1
+✔ purrr     1.0.4     
 ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
 ✖ dplyr::filter() masks stats::filter()
 ✖ dplyr::lag()    masks stats::lag()
 ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</preformat>
 </boxed-text>
 </sec>
-<p>Read a clean version of data:</p>
+<p>Llegir i endreçar les dades:</p>
 <sec specific-use="notebook-content">
 <code language="r script">la_palma &lt;- read_csv(&quot;la-palma.csv&quot;)
 </code>
@@ -528,9 +528,9 @@ dttm (1): DateTime
 ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</preformat>
 </boxed-text>
 </sec>
-<p>Create spatial plot:</p>
+<p>Creació d’un gràfic espacial:</p>
 <sec id="cell-fig-spatial-plot-nb-1" specific-use="notebook-content">
-<code language="r script">#|   against longitude.&quot;
+<code language="r script">
 la_palma |&gt; 
   ggplot(aes(Longitude, Latitude)) +
   geom_point(aes(color = Magnitude, size = 40-`Depth(km)`)) +
@@ -539,7 +539,7 @@ la_palma |&gt;
   theme_bw()
 </code>
 <fig id="fig-spatial-plot-nb-1">
-  <caption><p>Locations of earthquakes on La Palma since
+  <caption><p>Localitats dels terratrèmols a La Palma des de
   2017</p></caption>
   <graphic mimetype="image" mime-subtype="png" xlink:href="explore-earthquakes_files/figure-jats/fig-spatial-plot-1.png" />
 </fig>

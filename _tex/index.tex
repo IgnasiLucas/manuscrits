@@ -5,6 +5,7 @@
 \PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
 %
 \documentclass[
+  catalan,
 ]{agujournal2019}
 \usepackage{xcolor}
 \usepackage{amsmath,amssymb}
@@ -126,6 +127,14 @@
 \newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 
+\ifLuaTeX
+\usepackage[bidi=basic,shorthands=off]{babel}
+\else
+\usepackage[bidi=default,shorthands=off]{babel}
+\fi
+\ifLuaTeX
+  \usepackage{selnolig} % disable illegal ligatures
+\fi
 
 
 \setlength{\emergencystretch}{3em} % prevent overfull lines
@@ -147,36 +156,36 @@
 \@ifpackageloaded{caption}{}{\usepackage{caption}}
 \AtBeginDocument{%
 \ifdefined\contentsname
-  \renewcommand*\contentsname{Table of contents}
+  \renewcommand*\contentsname{Taula de continguts}
 \else
-  \newcommand\contentsname{Table of contents}
+  \newcommand\contentsname{Taula de continguts}
 \fi
 \ifdefined\listfigurename
-  \renewcommand*\listfigurename{List of Figures}
+  \renewcommand*\listfigurename{Llista de figures}
 \else
-  \newcommand\listfigurename{List of Figures}
+  \newcommand\listfigurename{Llista de figures}
 \fi
 \ifdefined\listtablename
-  \renewcommand*\listtablename{List of Tables}
+  \renewcommand*\listtablename{Llista de taules}
 \else
-  \newcommand\listtablename{List of Tables}
+  \newcommand\listtablename{Llista de taules}
 \fi
 \ifdefined\figurename
-  \renewcommand*\figurename{Figure}
+  \renewcommand*\figurename{Figura}
 \else
-  \newcommand\figurename{Figure}
+  \newcommand\figurename{Figura}
 \fi
 \ifdefined\tablename
-  \renewcommand*\tablename{Table}
+  \renewcommand*\tablename{Taula}
 \else
-  \newcommand\tablename{Table}
+  \newcommand\tablename{Taula}
 \fi
 }
 \@ifpackageloaded{float}{}{\usepackage{float}}
 \floatstyle{ruled}
 \@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
-\floatname{codelisting}{Listing}
-\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\floatname{codelisting}{Llistat}
+\newcommand*\listoflistings{\listof{codelisting}{Llista de llistats}}
 \makeatother
 \makeatletter
 \makeatother
@@ -188,9 +197,10 @@
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
-  pdftitle={La Palma Earthquakes},
+  pdftitle={Terratrèmols a La Palma},
   pdfauthor={Steve Purves; Rowan Cockett},
-  pdfkeywords={La Palma, Earthquakes},
+  pdflang={ca},
+  pdfkeywords={La Palma, Terratrèmols},
   colorlinks=true,
   linkcolor={blue},
   filecolor={Maroon},
@@ -199,12 +209,12 @@
   pdfcreator={LaTeX via pandoc}}
 
 
-\journalname{Earth and Space Science}
+\journalname{Ciències de la Terra i del Cel}
 
 \draftfalse
 
 \begin{document}
-\title{La Palma Earthquakes}
+\title{Terratrèmols a La Palma}
 
 \authors{Steve Purves\affil{1}, Rowan Cockett\affil{1}}
 \affiliation{1}{Curvenote, }
@@ -212,85 +222,85 @@
 
 
 \begin{abstract}
-In September 2021, a significant jump in seismic activity on the island
-of La Palma (Canary Islands, Spain) signaled the start of a volcanic
-crisis that still continues at the time of writing. Earthquake data is
-continually collected and published by the Instituto Geográphico
-Nacional (IGN). \ldots{}
+En setembre de 2021, un bot significant en l'activitat sísma de l'illa
+de La Palma (Illes Canàries, Espanya) va senyalar l'inici d'una crisi
+volcànica que encara continua. Dades de terratrèmols són arreplegades i
+publicades continuament per l'Institut Geográfic Nacional (IGN).
 \end{abstract}
 
 \section*{Plain Language Summary}
-Earthquake data for the island of La Palma from the September 2021
-eruption is found \ldots{}
+Dades de terratrèmols a l'illa de La Palma des de l'erupció de setembre
+de 2021\ldots{}
 
 
 
 
-\section{Introduction}\label{introduction}
+\section{Introducció}\label{introducciuxf3}
 
-\textsubscript{Source:
-\href{https://IgnasiLucas.github.io/manuscrits/index.qmd.html}{Article
-Notebook}}
+\textsubscript{Font:
+\href{https://IgnasiLucas.github.io/manuscrits/index.qmd.html}{Bloc de
+notes de l\textquotesingle article}}
 
 \protect\phantomsection\label{cell-fig-timeline}
 \begin{figure}[H]
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio,alt={An event plot of the years of the last 8 eruptions on La Palma.}]{index_files/figure-pdf/fig-timeline-1.pdf}}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Gráfica dels moments en què es van produir les últimes 8 erupcions en La Palma.}]{index_files/figure-pdf/fig-timeline-1.pdf}}
 
 }
 
-\caption{\label{fig-timeline}Timeline of recent earthquakes on La Palma}
+\caption{\label{fig-timeline}Cronologia de terratrèmols recents.}
 
 \end{figure}%
 
-\textsubscript{Source:
-\href{https://IgnasiLucas.github.io/manuscrits/index.qmd.html}{Article
-Notebook}}
+\textsubscript{Font:
+\href{https://IgnasiLucas.github.io/manuscrits/index.qmd.html}{Bloc de
+notes de l\textquotesingle article}}
 
-\textsubscript{Source:
-\href{https://IgnasiLucas.github.io/manuscrits/index.qmd.html}{Article
-Notebook}}
+\textsubscript{Font:
+\href{https://IgnasiLucas.github.io/manuscrits/index.qmd.html}{Bloc de
+notes de l\textquotesingle article}}
 
-Based on data up to and including 1971, eruptions on La Palma happen
-every 79.8 years on average.
+D'acorda amb dades que arriben a l'any 1971, les eurpcions a La Palma
+esdevenen cada 79.8 anys en terme mig.
 
-Studies of the magma systems feeding the volcano, such as Marrero et al.
-(2019), have proposed that there are two main magma reservoirs feeding
-the Cumbre Vieja volcano; one in the mantle (30-40km depth) which
-charges and in turn feeds a shallower crustal reservoir (10-20km depth).
+Estudis dels sistema magmàtic que alimenten el volcà, tal com Marrero et
+al. (2019), proposen que hi ha dos reserves principals de magma que
+alimenten el volcà de \emph{Cumbre Vieja}; un al mantell (30-40 km de
+profunditat), que recarrega i alimenta alhora una reserva més
+superficial a l'escorça (10-20 km de profunditat).
 
-Eight eruptions have been recorded since the late 1400s
-(Figure~\ref{fig-timeline}).
+Huit erupcions han estat registrades des de finals del segle XV
+(Figura~\ref{fig-timeline}).
 
-Data and methods are discussed in Section~\ref{sec-data-methods}.
+Les dades i els mètodes són discutats en Secció~\ref{sec-data-methods}.
 
-Let \(x\) denote the number of eruptions in a year. Then, \(x\) can be
-modeled by a Poisson distribution
+Siga \(x\) el nombre d'erupcions en un any. Aleshores, \(x\) pot ser
+modelada per una distribució de Poisson
 
 \begin{equation}\protect\phantomsection\label{eq-poisson}{
 p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
 }\end{equation}
 
-where \(\lambda\) is the rate of eruptions per year. Using
-Equation~\ref{eq-poisson}, the probability of an eruption in the next
-\(t\) years can be calculated.
+on \(\lambda\) és la taxa d'erupcions per any. Utilitzant
+Equació~\ref{eq-poisson}, la probabilitat d'una erupció en els pròxims
+\(t\) anys pot ser calculada.
 
 \begin{longtable}[]{@{}ll@{}}
-\caption{Recent historic eruptions on La
+\caption{Història recent d'erupcions a La
 Palma}\label{tbl-history}\tabularnewline
 \toprule\noalign{}
-Name & Year \\
+Nome & Any \\
 \midrule\noalign{}
 \endfirsthead
 \toprule\noalign{}
-Name & Year \\
+Nome & Any \\
 \midrule\noalign{}
 \endhead
 \bottomrule\noalign{}
 \endlastfoot
-Current & 2021 \\
+Actual & 2021 \\
 Teneguía & 1971 \\
 Nambroque & 1949 \\
 El Charco & 1712 \\
@@ -300,8 +310,8 @@ Tajuya near El Paso & 1585 \\
 Montaña Quemada & 1492 \\
 \end{longtable}
 
-Table~\ref{tbl-history} summarises the eruptions recorded since the
-colonization of the islands by Europeans in the late 1400s.
+Taula~\ref{tbl-history} resumeix les erupcions registrades des de la
+colonització de l'illa pels europeus cap a fnals del segle XV.
 
 \begin{figure}
 
@@ -311,39 +321,39 @@ colonization of the islands by Europeans in the late 1400s.
 
 }
 
-\caption{\label{fig-map}Map of La Palma}
+\caption{\label{fig-map}Mapa de La Palma}
 
 \end{figure}%
 
-La Palma is one of the west most islands in the Volcanic Archipelago of
-the Canary Islands (Figure~\ref{fig-map}).
+La Palma és una de les illes més occidentals de l'arxipèlag volcànic de
+les Illes Canàries (Figura~\ref{fig-map}).
 
 \begin{figure}[H]
 
 \centering{
 
-\pandocbounded{\includegraphics[keepaspectratio,alt={A scatterplot of earthquake locations plotting latitude against longitude.}]{index_files/figure-latex/notebooks-explore-earthquakes-fig-spatial-plot-output-1.png}}
+\pandocbounded{\includegraphics[keepaspectratio,alt={Diagrama de dispersió de les localitats dels terratrèmols, represntant la latitud i la longitud.}]{index_files/figure-latex/notebooks-explore-earthquakes-fig-spatial-plot-output-1.png}}
 
 }
 
-\caption{\label{fig-spatial-plot}Locations of earthquakes on La Palma
-since 2017}
+\caption{\label{fig-spatial-plot}Localitats dels terratrèmols a La Palma
+des de 2017}
 
 \end{figure}%
 
-\textsubscript{Source:
-\href{https://IgnasiLucas.github.io/manuscrits/notebooks/explore-earthquakes-preview.html\#cell-fig-spatial-plot}{Explore
-Earthquakes}}
+\textsubscript{Font:
+\href{https://IgnasiLucas.github.io/manuscrits/notebooks/explore-earthquakes-preview.html\#cell-fig-spatial-plot}{Exploració
+de terratrèmols}}
 
-Figure~\ref{fig-spatial-plot} shows the location of recent Earthquakes
-on La Palma.
+Figura~\ref{fig-spatial-plot} mostra la localització de terratrèmols
+recents a La Palma.
 
-\section{Data \& Methods}\label{sec-data-methods}
+\section{Dades i Mètodes}\label{sec-data-methods}
 
-\section{Conclusion}\label{conclusion}
+\section{Conclusió}\label{conclusiuxf3}
 
-\section*{References}\label{references}
-\addcontentsline{toc}{section}{References}
+\section*{Referències}\label{referuxe8ncies}
+\addcontentsline{toc}{section}{Referències}
 
 \protect\phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
@@ -352,7 +362,7 @@ on La Palma.
 \bibitem[\citeproctext]{ref-marrero2019}
 Marrero, J., García, A., Berrocoso, M., Llinares, Á., Rodríguez-Losada,
 A., \& Ortiz, R. (2019). Strategies for the development of volcanic
-hazard maps in monogenetic volcanic fields: The example of {La} {Palma}
+hazard maps in monogenetic volcanic fields: the example of {La} {Palma}
 ({Canary} {Islands}). \emph{Journal of Applied Volcanology}, \emph{8}.
 \url{https://doi.org/10.1186/s13617-019-0085-5}
 
