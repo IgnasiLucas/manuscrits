@@ -1,15 +1,15 @@
 ---
-title: La Palma Earthquakes
+title: Terratrèmols a La Palma
 author:
   - name: Steve Purves
     orcid: 0000-0002-0760-5497
     corresponding: true
     email: steve@curvenote.com
     roles:
-      - Investigation
-      - Project administration
-      - Software
-      - Visualization
+      - Investigació
+      - Administració del projecte
+      - Programari
+      - Visualitzacio
     affiliations:
       - Curvenote
   - name: Rowan Cockett
@@ -20,22 +20,22 @@ author:
       - Curvenote
 keywords:
   - La Palma
-  - Earthquakes
+  - Terratrèmols
 abstract: |
-  In September 2021, a significant jump in seismic activity on the island of La Palma (Canary Islands, Spain) signaled the start of a volcanic crisis that still continues at the time of writing. Earthquake data is continually collected and published by the Instituto Geográphico Nacional (IGN). ...
+  En setembre de 2021, un bot significant en l'activitat sísma de l'illa de La Palma (Illes Canàries, Espanya) va senyalar l'inici d'una crisi volcànica que encara continua. Dades de terratrèmols són arreplegades i publicades continuament per l'Institut Geográfic Nacional (IGN).
 plain-language-summary: |
-  Earthquake data for the island of La Palma from the September 2021 eruption is found ...
+  Dades de terratrèmols a l'illa de La Palma des de l'erupció de setembre de 2021...
 key-points:
-  - A web scraping script was developed to pull data from the Instituto Geogràphico Nacional into a machine-readable form for analysis
-  - Earthquake events on La Palma are consistent with the presence of both mantle and crustal reservoirs.
+  - S'ha desenvolupat un script per arreplegar dades automàticament de l'Instituto Geográfico Nacional.
+  - Els terratrèmols en La Palma són consistents amb la presència de reserves en la crost ai el mantell.
 date: last-modified
 bibliography: references.bib
 citation:
-  container-title: Earth and Space Science
+  container-title: Ciències de la Terra i del Cel
 number-sections: true
 ---
 
-## Introduction
+## Introducció
 
 ```{r}
 eruptions <- c(1492, 1585, 1646, 1677, 1712, 1949, 1971, 2021)
@@ -44,8 +44,8 @@ n_eruptions <- length(eruptions)
 
 ```{r}
 #| label: fig-timeline
-#| fig-cap: Timeline of recent earthquakes on La Palma
-#| fig-alt: An event plot of the years of the last 8 eruptions on La Palma.
+#| fig-cap: Cronologia de terratrèmols recents.
+#| fig-alt: Gráfica dels moments en què es van produir les últimes 8 erupcions en La Palma.
 #| fig-height: 1.5
 #| fig-width: 6
 par(mar = c(3, 1, 1, 1) + 0.1)
@@ -61,25 +61,25 @@ avg_years_between_eruptions <- mean(diff(eruptions[-n_eruptions]))
 avg_years_between_eruptions
 ```
 
-Based on data up to and including 1971, eruptions on La Palma happen every `{r} round(avg_years_between_eruptions, 1)` years on average.
+D'acorda amb dades que arriben a l'any 1971, les eurpcions a La Palma esdevenen cada `{r} round(avg_years_between_eruptions, 1)` anys en terme mig.
 
-Studies of the magma systems feeding the volcano, such as @marrero2019, have proposed that there are two main magma reservoirs feeding the Cumbre Vieja volcano; one in the mantle (30-40km depth) which charges and in turn feeds a shallower crustal reservoir (10-20km depth).
+Estudis dels sistema magmàtic que alimenten el volcà, tal com @marrero2019, proposen que hi ha dos reserves principals de magma que alimenten el volcà de *Cumbre Vieja*; un al mantell (30-40 km de profunditat), que recarrega i alimenta alhora una reserva més superficial a l'escorça (10-20 km de profunditat).
 
-Eight eruptions have been recorded since the late 1400s (@fig-timeline).
+Huit erupcions han estat registrades des de finals del segle XV (@fig-timeline).
 
-Data and methods are discussed in @sec-data-methods.
+Les dades i els mètodes són discutats en @sec-data-methods.
 
-Let $x$ denote the number of eruptions in a year. Then, $x$ can be modeled by a Poisson distribution
+Siga $x$ el nombre d'erupcions en un any. Aleshores, $x$ pot ser modelada per una distribució de Poisson
 
 $$
 p(x) = \frac{e^{-\lambda} \lambda^{x}}{x !}
 $$ {#eq-poisson}
 
-where $\lambda$ is the rate of eruptions per year. Using @eq-poisson, the probability of an eruption in the next $t$ years can be calculated.
+on $\lambda$ és la taxa d'erupcions per any. Utilitzant @eq-poisson, la probabilitat d'una erupció en els pròxims $t$ anys pot ser calculada.
 
-| Name                 | Year   |
+| Nome                 | Any   |
 | -------------------- | ------ |
-| Current              | 2021   |
+| Actual               | 2021   |
 | Teneguía             | 1971   |
 | Nambroque            | 1949   |
 | El Charco            | 1712   |
@@ -88,23 +88,23 @@ where $\lambda$ is the rate of eruptions per year. Using @eq-poisson, the probab
 | Tajuya near El Paso  | 1585   |
 | Montaña Quemada      | 1492   |
 
-: Recent historic eruptions on La Palma {#tbl-history}
+: Història recent d'erupcions a La Palma {#tbl-history}
 
-@tbl-history summarises the eruptions recorded since the colonization of the islands by Europeans in the late 1400s.
+@tbl-history resumeix les erupcions registrades des de la colonització de l'illa pels europeus cap a fnals del segle XV.
 
-![Map of La Palma](images/la-palma-map.png){#fig-map}
+![Mapa de La Palma](images/la-palma-map.png){#fig-map}
 
-La Palma is one of the west most islands in the Volcanic Archipelago of the Canary Islands (@fig-map). 
+La Palma és una de les illes més occidentals de l'arxipèlag volcànic de les Illes Canàries (@fig-map).
 
 {{< embed notebooks/explore-earthquakes.qmd#fig-spatial-plot >}}
 
-@fig-spatial-plot shows the location of recent Earthquakes on La Palma.
+@fig-spatial-plot mostra la localització de terratrèmols recents a La Palma.
 
-## Data & Methods {#sec-data-methods}
+## Dades i Mètodes {#sec-data-methods}
 
-## Conclusion
+## Conclusió
 
-## References {.unnumbered}
+## Referències {.unnumbered}
 
 :::{#refs}
 

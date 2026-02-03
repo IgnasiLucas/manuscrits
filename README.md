@@ -1,4 +1,5 @@
-## A Quarto Manuscript Template
+## Plantilla d'un manuscrit de Quarto
 
-This is a template repo for generating a manuscript from Quarto that accompanies the tutorial at: [Quarto Manuscripts: RStudio](https://quarto.org/docs/manuscripts/authoring/rstudio.html)
+Açò és una plantilla de repositori per generar un manuscrit amb Quarto. El tutorial
+que l'acompanya està en: [Quarto Manuscripts: RStudio](https://quarto.org/docs/manuscripts/authoring/rstudio.html)
 

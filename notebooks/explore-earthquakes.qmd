@@ -1,5 +1,5 @@
 ---
-title: Explore Earthquakes
+title: Exploració de terratrèmols
 author: Charlotte Wickham
 ---
 
@@ -7,20 +7,19 @@ author: Charlotte Wickham
 library(tidyverse)
 ```
 
-
-Read a clean version of data:
+Llegir i endreçar les dades:
 
 ```{r}
 la_palma <- read_csv("la-palma.csv")
 ```
 
-Create spatial plot:
+Creació d'un gràfic espacial:
 
 ```{r}
 #| label: fig-spatial-plot
-#| fig-cap: "Locations of earthquakes on La Palma since 2017"
-#| fig-alt: "A scatterplot of earthquake locations plotting latitude
-#|   against longitude."
+#| fig-cap: "Localitats dels terratrèmols a La Palma des de 2017"
+#| fig-alt: "Diagrama de dispersió de les localitats dels terratrèmols, represntant la latitud i la longitud."
+
 la_palma |> 
   ggplot(aes(Longitude, Latitude)) +
   geom_point(aes(color = Magnitude, size = 40-`Depth(km)`)) +
